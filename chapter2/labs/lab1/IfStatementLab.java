@@ -12,7 +12,11 @@ public class IfStatementLab {
         // 1. 사용자로부터 숫자를 입력받아 양수, 음수, 또는 0인지 판별하는 프로그램
         System.out.println("숫자를 입력하세요: ");
         int number = scanner.nextInt();
-        
+        if (number > 0)
+        {System.out.println("양수");}
+        else if (number < 0)
+        {System.out.println("음수");}
+        else {System.out.println("0");}
         // TODO: 입력받은 숫자가 양수, 음수, 0인지 판별하고 출력하세요.
         // 양수이면 "양수입니다."
         // 음수이면 "음수입니다."
@@ -24,7 +28,10 @@ public class IfStatementLab {
         int num1 = scanner.nextInt();
         System.out.println("두 번째 숫자를 입력하세요: ");
         int num2 = scanner.nextInt();
-        
+
+        int max = num1>num2 ? num1 : num2;
+        System.out.println(max);
+        if (num1 == num2) {System.out.println("두 수는 같습니다.");}
         // TODO: 두 숫자 중 큰 수를 출력하세요.
         // 만약 두 수가 같다면 "두 수는 같습니다."라고 출력하세요.
         
@@ -40,7 +47,12 @@ public class IfStatementLab {
         // 60-69: "D"
         // 0-59: "F"
         // 범위를 벗어난 점수: "잘못된 점수입니다."
-        
+        if (100>score && score >=90){ System.out.println("A");}
+        else if (90>score && score >=80){ System.out.println("B");}
+        else if (80>score && score >=70){ System.out.println("C");}
+        else if (70>score && score >=60){ System.out.println("D");}
+        else if (60>score && score >=0){ System.out.println("F");}
+        else System.out.println("잘못된 점수입니다.");
         
         scanner.close();
     }

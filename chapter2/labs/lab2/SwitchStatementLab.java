@@ -21,7 +21,30 @@ public class SwitchStatementLab {
         // "금요일" - "주간 업무를 정리합니다."
         // "토요일" 또는 "일요일" - "휴일입니다."
         // 그 외 - "잘못된 요일입니다."
-        
+        switch (day) {
+            case "월요일":
+                System.out.println("회의가 있습니다.");
+                break;
+            case "화요일":
+                System.out.println("보고서를 작성합니다.");
+                break;
+            case "수요일":
+                System.out.println("팀 미팅이 있습니다.");
+                break;
+            case "목요일":
+                System.out.println("외근이 있습니다.");
+                break;
+            case "금요일":
+                System.out.println("주간 업무를 정리합니다.");
+                break;
+            case "토요일": case "일요일":
+                System.out.println("휴일입니다.");
+                break;
+
+            default:
+                System.out.println("잘못된 요일입니다.");
+                break;
+        }
         
         // 2. 간단한 계산기 프로그램
         System.out.println("\n첫 번째 숫자를 입력하세요: ");
@@ -38,6 +61,20 @@ public class SwitchStatementLab {
         // "*" - 두 수의 곱
         // "/" - 첫 번째 수를 두 번째 수로 나눈 값 (두 번째 수가 0이면 "0으로 나눌 수 없습니다." 출력)
         // 그 외 - "잘못된 연산자입니다."
+        switch (operator) {
+            case "+": System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+            break;
+            case "-": System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+            break;
+            case "*": System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
+            break;
+            case "/": if(num2==0) {System.out.println("0으로 나눌 수 없습니다."); break;}
+                System.out.println(num1 / num2 + " = " + (num1 / num2));
+            break;
+            default: System.out.println("잘못된 연산자입니다.");
+            break;
+
+        }
         
         
         // 3. 월 입력받아 계절 출력하기
@@ -50,7 +87,24 @@ public class SwitchStatementLab {
         // 6, 7, 8월 - "여름"
         // 9, 10, 11월 - "가을"
         // 범위를 벗어난 값 - "잘못된 월입니다."
-        
+        String season;
+        switch (month) {
+            case 12: case 1: case 2:
+                season = "겨울";
+                break;
+            case 3: case 4: case 5:
+                season = "봄";
+                break;
+            case 6: case 7: case 8:
+                season = "여름";
+                break;
+            case 9: case 10: case 11:
+                season = "가을";
+                break;
+            default:
+                season = "잘못된 월입니다.";
+        }
+        System.out.println(month + "월은 " + season + "입니다.");
         
         scanner.close();
     }

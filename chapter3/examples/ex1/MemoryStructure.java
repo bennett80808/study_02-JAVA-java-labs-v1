@@ -7,7 +7,7 @@ public class MemoryStructure {
     // 클래스 변수(static 변수) - 메소드 영역에 저장
     static int staticVariable = 100;
     
-    // 인스턴스 변수 - 힙 영역에 저장
+    // 인스턴스 변수(필드) - 힙 영역에 저장
     int instanceVariable = 200;
     
     public static void main(String[] args) {
@@ -30,7 +30,7 @@ public class MemoryStructure {
         System.out.println("primitiveA: " + primitiveA); // 10 출력
         System.out.println("primitiveB: " + primitiveB); // 20 출력
         
-        Person personA = new Person("John");
+        Person personA = new Person("John");    // 객체를 생성. John은 힙에 저장.
         Person personB = personA; // 참조 복사 (같은 객체를 가리킴)
         personB.setName("Elon"); // personA에도 영향
         

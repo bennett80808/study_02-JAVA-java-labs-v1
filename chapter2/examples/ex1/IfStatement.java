@@ -34,6 +34,7 @@ public class IfStatement {
         }
         
         // 중첩 if 문
+        // 가능한 중첩은 피하는게 좋다.
         int a = 10;
         int b = 20;
         if (a > 0) {
