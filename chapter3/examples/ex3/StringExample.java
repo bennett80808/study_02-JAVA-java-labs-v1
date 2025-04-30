@@ -10,6 +10,8 @@ public class StringExample {
         
         // 리터럴 방식으로 문자열 생성
         String str1 = "Hello, World!";
+        String str3 = "Hello, World!";
+        System.out.println(str1==str3); // 리터럴로 생성해서 스트링풀에 있던거 씀
         // new 연산자를 사용한 문자열 생성
         String str2 = new String("Hello, World!");
         
@@ -56,7 +58,7 @@ public class StringExample {
         System.out.println("toLowerCase(): " + text.toLowerCase());
         
         // 공백 제거
-        String spacedText = "   Trim Example   ";
+        String spacedText = "   Trim Example   "; // 내부에 있는 띄어쓰기는 남는다.
         System.out.println("trim(): '" + spacedText.trim() + "'");
         
         // 문자열 검색
@@ -69,7 +71,7 @@ public class StringExample {
         System.out.println("\n===== 문자열 분할 =====");
         
         String csvData = "사과,바나나,포도,딸기,오렌지";
-        String[] fruits = csvData.split(",");
+        String[] fruits = csvData.split(","); // 결과가 String 배열
         
         System.out.println("split() 결과:");
         for (String fruit : fruits) {
@@ -102,7 +104,9 @@ public class StringExample {
         // StringBuilder
         System.out.println("\n===== StringBuilder와 StringBuffer =====");
         
-        // StringBuilder (단일 스레드 환경에서 더 효율적)
+        // StringBuilder (단일 스레드 환경에서 더 효율적) 
+        // StringBuilder는 수정 가능하고 String은 수정하면 힙에 새로 만듬
+        // 스트링 빌더가 더 효율적
         StringBuilder sb = new StringBuilder();
         sb.append("Java ");
         sb.append("is ");
