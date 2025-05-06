@@ -32,6 +32,13 @@ public class StarPatternLab {
         // *****
         
         // TODO: 위와 같은 패턴을 출력하세요.
+
+        for ( i = 0; i < height; i++) {
+            for (int j = height - i; j <= height; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
         
         
         // 2. 직각삼각형 패턴 (오른쪽 정렬)
@@ -54,7 +61,18 @@ public class StarPatternLab {
 
 
         // TODO: 위와 같은 패턴을 출력하세요.
-        
+
+        for ( i = 0; i < height; i++) {
+            for (int j = 0; j <= height; j++) {
+                if (height - i <= j) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+
         
         // 3. 피라미드 패턴
         System.out.println("\n3. 피라미드 패턴");
@@ -75,8 +93,20 @@ public class StarPatternLab {
         }
 
         // TODO: 위와 같은 패턴을 출력하세요.
-        
-        
+
+        for ( i = 1; i <= height; i++) {
+            // 공백 출력
+            for (int j = 1; j <= height - i; j++) {
+                System.out.print(" ");
+            }
+            // 별 출력
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            // 줄 바꿈
+            System.out.println();
+        }
+
         // 4. 역삼각형 패턴
         System.out.println("\n4. 역삼각형 패턴");
         // 예시 (높이 5):
@@ -91,7 +121,7 @@ public class StarPatternLab {
         int height4 = scanner.nextInt();
         i = 1;
         while(i <= height4) {
-            for(int j=1;j<i;j++){System.out.print(" "); }
+            for(int j=0;j<i-1;j++){System.out.print(" "); }
             for(int k=1;k<=(2*(height4 - i + 1)-1);k++){System.out.print("*");}
             System.out.println();
             i++;

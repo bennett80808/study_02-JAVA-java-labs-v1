@@ -26,26 +26,35 @@ public class MemoryStructure {
         int primitiveA = 10;
         int primitiveB = primitiveA; // 값 복사
         primitiveB = 20; // primitiveA에 영향 없음
+        primitiveA = 30;
         
         System.out.println("primitiveA: " + primitiveA); // 10 출력
         System.out.println("primitiveB: " + primitiveB); // 20 출력
         
+
         Person personA = new Person("John");    // 객체를 생성. John은 힙에 저장.
-        Person personB = personA; // 참조 복사 (같은 객체를 가리킴)
-        personB.setName("Elon"); // personA에도 영향
+
+        Person personC = new Person("John"); // 객체를 생성
+
+        Person personD = personC; // 참조 복사 (같은 객체를 가리킴)
+        personD.setName("Elon"); // personA에도 영향
+
+        // personA : John
+        // personB : Elon
         
-        System.out.println("personA의 이름: " + personA.getName()); // Elon 출력
-        System.out.println("personB의 이름: " + personB.getName()); // Elon 출력
+        System.out.println("personC의 이름: " + personC.getName()); // Elon 출력
+        System.out.println("personD의 이름: " + personD.getName()); // Elon 출력
         
         // 메소드 호출 시 매개변수 전달 방식
         System.out.println("\n===== 매개변수 전달 방식 =====");
         
         int number = 10;
+        Person person = new Person("John");
         System.out.println("메소드 호출 전 number: " + number);
         changeValue(number); // 값에 의한 전달 (Call by Value)
         System.out.println("메소드 호출 후 number: " + number); // 변경 없음
         
-        Person person = new Person("John");
+
         System.out.println("메소드 호출 전 person 이름: " + person.getName());
         changeName(person); // 참조에 의한 전달 (Call by Reference)
         System.out.println("메소드 호출 후 person 이름: " + person.getName()); // 변경됨

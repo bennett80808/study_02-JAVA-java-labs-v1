@@ -25,7 +25,7 @@ public class ForLoopLab {
 
         // TODO: 입력받은 단의 구구단을 출력하세요.
         // for 반복문을 사용하여 해당 단의 1부터 9까지의 곱셈 결과를 출력하세요.
-        
+
         
         // 3. 팩토리얼 계산하기
         System.out.println("\n팩토리얼을 계산할 숫자를 입력하세요: ");
@@ -34,9 +34,18 @@ public class ForLoopLab {
         // TODO: 입력받은 숫자의 팩토리얼을 계산하여 출력하세요.
         // 팩토리얼은 1부터 n까지의 모든 정수를 곱한 값입니다.
         // 예: 5! = 5 × 4 × 3 × 2 × 1 = 120
+
         int fac = 1;
         for(int i=1; i<=n; i++){fac *= i;}
         System.out.println("fac: " + fac);
+
+
+        int sum3 = 1;
+        for (int i = 1; i <= n; i++) {
+            sum3 = sum3 * i;
+        }
+        System.out.println(sum3);
+
         
         scanner.close();
     }
