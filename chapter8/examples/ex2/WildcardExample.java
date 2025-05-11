@@ -76,7 +76,8 @@ public class WildcardExample {
         
         // 와일드카드의 제약 설명
         List<?> wildcardList = new ArrayList<>(Arrays.asList(1, 2, 3));
-        // wildcardList.add(4); // 컴파일 오류: 제한 없는 와일드카드 리스트에는 null 외에 어떤 것도 추가할 수 없음
+//         wildcardList.add(4); // 컴파일 오류: 제한 없는 와일드카드 리스트에는 null 외에 어떤 것도 추가할 수 없음
+        //👉 컴파일러 입장에선 List<?>는 정확히 어떤 타입인지 모르기 때문에 안전하지 않다고 판단해.
         wildcardList.clear(); // OK: null 관련 연산은 가능
     }
 } 

@@ -42,8 +42,11 @@ public class BankingSystem {
     public BankAccount getAccount(String accountNumber) throws InvalidAccountException {
         // TODO: 계좌번호가 존재하지 않는 경우 InvalidAccountException을 발생시키세요.
         // TODO: 계좌가 존재하면 해당 계좌 객체를 반환하세요.
-        
-        return null; // 학생이 구현해야 하는 부분
+        BankAccount account = accounts.get(accountNumber);
+        if(account == null){
+            throw new InvalidAccountException("❌ 존재하지 않는 계좌번호입니다: ", accountNumber);
+        }
+        return account; // 학생이 구현해야 하는 부분
     }
     
     /**
