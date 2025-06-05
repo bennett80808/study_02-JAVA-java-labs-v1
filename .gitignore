@@ -1,0 +1,36 @@
+# IntelliJ IDEA 관련 파일/폴더
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# 빌드 결과물
+/out/
+build/
+target/
+bin/
+*.class
+
+# 로그 파일
+*.log
+
+# OS별 불필요 파일
+.DS_Store
+Thumbs.db
+
+# 환경설정 파일
+*.env
+
+# Maven Wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle Wrapper
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# 기타
+*.swp
+*.swo
+
+# 테스트 리포트
+/test-output/
